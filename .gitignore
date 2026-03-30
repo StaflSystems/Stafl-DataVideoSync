@@ -1,0 +1,30 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller
+build/
+dist/
+
+# Virtual environment
+.venv/
+venv/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Test data (don't commit large binary files)
+*.blf
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.dbc
+*.xlsx
+*.xls
