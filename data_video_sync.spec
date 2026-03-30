@@ -1,13 +1,13 @@
 # -*- mode: python ; coding: utf-8 -*-
 """
-PyInstaller spec for BLF Video Sync.
-Build:  pyinstaller blf_video_sync.spec
+PyInstaller spec for Data Video Sync.
+Build:  pyinstaller data_video_sync.spec
 """
 
 block_cipher = None
 
 a = Analysis(
-    ["blf_video_sync.py"],
+    ["data_video_sync.py"],
     pathex=[],
     binaries=[],
     datas=[],
@@ -51,7 +51,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name="BLF_Video_Sync",
+    name="Data_Video_Sync",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

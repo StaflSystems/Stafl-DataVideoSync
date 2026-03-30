@@ -1,6 +1,6 @@
-# BLF Video Sync
+# Data Video Sync
 
-Synchronized playback of CAN bus data and video for test review and analysis.
+Synchronized playback of time-series data and video for test review and analysis.
 
 ![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
@@ -26,10 +26,10 @@ pip install cantools    # optional, for DBC decoding
 pip install openpyxl    # optional, for Excel support
 ```
 
-Double-click `blf_video_sync.py` or run:
+Double-click `data_video_sync.py` or run:
 
 ```
-python blf_video_sync.py
+python data_video_sync.py
 ```
 
 A file picker dialog will open. Select your video and data file, then click **Open**.
@@ -37,18 +37,18 @@ A file picker dialog will open. Select your video and data file, then click **Op
 You can also pass files directly:
 
 ```
-python blf_video_sync.py video.mp4 data.blf
-python blf_video_sync.py video.mp4 data.csv
-python blf_video_sync.py video.mp4 data.blf --dbc signals.dbc
+python data_video_sync.py video.mp4 data.blf
+python data_video_sync.py video.mp4 data.csv
+python data_video_sync.py video.mp4 data.blf --dbc signals.dbc
 ```
 
 ### Option B — Use the standalone .exe
 
-Download `BLF_Video_Sync.exe` from the latest release. No Python install needed — just run it.
+Download `Data_Video_Sync.exe` from the latest release. No Python install needed — just run it.
 
 ```
-BLF_Video_Sync.exe
-BLF_Video_Sync.exe video.mp4 data.blf
+Data_Video_Sync.exe
+Data_Video_Sync.exe video.mp4 data.blf
 ```
 
 ## DBC Auto-Discovery
@@ -102,15 +102,15 @@ If the auto-detected offset is wrong, use the Sync Wizard:
 
 ```
 pip install pyinstaller
-pyinstaller blf_video_sync.spec
+pyinstaller data_video_sync.spec
 ```
 
-Output: `dist/BLF_Video_Sync.exe`
+Output: `dist/Data_Video_Sync.exe`
 
 ## CLI Reference
 
 ```
-blf_video_sync.py [video] [data] [options]
+data_video_sync.py [video] [data] [options]
 
 positional arguments:
   video           Video file (.mp4, .avi, .mkv, etc.)

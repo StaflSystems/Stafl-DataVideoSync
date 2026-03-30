@@ -1,7 +1,7 @@
 """
-BLF + Video Synchronized Playback Tool
+Data + Video Synchronized Playback Tool
 =======================================
-Displays CAN bus data (from .blf, .csv, or .xlsx) alongside video playback
+Displays time-series data (from .blf, .csv, or .xlsx) alongside video playback
 with automatic time synchronization based on absolute timestamps.
 
 Supports:
@@ -447,7 +447,7 @@ class LauncherDialog(QtWidgets.QDialog):
 
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.setWindowTitle("BLF Video Sync — Open Files")
+        self.setWindowTitle("Data Video Sync — Open Files")
         self.setMinimumWidth(550)
         self.video_path = ""
         self.data_path = ""
@@ -458,7 +458,7 @@ class LauncherDialog(QtWidgets.QDialog):
         layout = QtWidgets.QVBoxLayout(self)
 
         # Title
-        title = QtWidgets.QLabel("<h2>BLF + Video Sync Tool</h2>")
+        title = QtWidgets.QLabel("<h2>Data Video Sync</h2>")
         title.setAlignment(QtCore.Qt.AlignCenter)
         layout.addWidget(title)
 
@@ -817,7 +817,7 @@ class PlotSettings(QtWidgets.QGroupBox):
 class SyncPlayer(QtWidgets.QMainWindow):
     def __init__(self, video_path: str, data, auto_offset: float, sync_report: str = ""):
         super().__init__()
-        self.setWindowTitle(f"BLF + Video Sync — {Path(video_path).name}")
+        self.setWindowTitle(f"Data Video Sync — {Path(video_path).name}")
 
         self.data = data
         self.sync_report = sync_report
@@ -1456,12 +1456,12 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""\
 Examples:
-  blf_video_sync                                          (opens GUI file picker)
-  blf_video_sync video.mp4 data.blf
-  blf_video_sync video.mp4 data.csv
-  blf_video_sync video.mp4 data.blf --dbc battery.dbc
-  blf_video_sync video.mp4 data.blf --offset 2.5
-  blf_video_sync video.mp4 data.blf --no-dbc
+  data_video_sync                                          (opens GUI file picker)
+  data_video_sync video.mp4 data.blf
+  data_video_sync video.mp4 data.csv
+  data_video_sync video.mp4 data.blf --dbc battery.dbc
+  data_video_sync video.mp4 data.blf --offset 2.5
+  data_video_sync video.mp4 data.blf --no-dbc
 
 Keyboard shortcuts:
   Space       Play / Pause
