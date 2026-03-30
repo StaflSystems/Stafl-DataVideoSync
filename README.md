@@ -7,6 +7,8 @@ Synchronized playback of time-series data and video for test review and analysis
 
 ## What It Does
 
+> **Just want to use the .exe?** See the [Quick Start Guide](QUICKSTART.md) — no setup required.
+
 Plays a video file side-by-side with time-series data from a BLF (CAN log), CSV, or Excel file. A red cursor on the plot tracks the current video position so you can correlate physical events with sensor data.
 
 **Supported data formats:**
